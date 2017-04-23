@@ -6,10 +6,10 @@
 
 import React, { Component } from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
+    AppRegistry, Button,
+    StyleSheet,
+    Text,
+    View
 } from 'react-native';
 
 export default class apprechnung extends Component {
@@ -17,11 +17,9 @@ export default class apprechnung extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Murphys Apprechnung!
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
+        <Button style={styles.instructions} title={"Starte"} onPress={this.startApplication} />
         <Text style={styles.instructions}>
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
@@ -29,6 +27,10 @@ export default class apprechnung extends Component {
       </View>
     );
   }
+
+    startApplication() {
+        alert("I am a really nice app!");
+    }
 }
 
 const styles = StyleSheet.create({
@@ -36,7 +38,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#5eff71',
   },
   welcome: {
     fontSize: 20,
